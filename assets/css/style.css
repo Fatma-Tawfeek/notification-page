@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("../fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+}
+:root {
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-light-grayish-blue);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    padding: 5rem 0;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 50rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.notifications-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notifications-title h1 {
+    color: var(--very-dark-blue);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+#count {
+    color: var(--white);
+    background-color: var(--blue);
+    border-radius: 10px;
+    padding: 0.2rem 0.8rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.mark-all {
+    color: var(--very-dark-blue);
+    text-decoration: none;
+}
+
+.mark-all:hover {
+    color: var(--blue);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    color: var(--grayish-blue);
+}
+
+.notification-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.unread-notification {
+    background-color: var(--light-grayish-blue-1);
+    cursor: pointer;
+}
+
+.notification-item img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+
+.notification-content {
+    color: var(--dark-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.username {
+    color: var(--very-dark-blue);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.username:hover {
+    color: var(--blue);
+}
+
+.notification-link {
+    color: var(--blue);
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.unread {
+    background-color: var(--red);
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+}
+
+.time {
+    color: var(--grayish-blue);
+}
+
+.message {
+    border: 1px solid var(--grayish-blue);
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: var(--white);
+    margin-top: 0.5rem;
+}
+
+.message:hover {
+    background-color: var(--light-grayish-blue-2);
+}
+
+.notification {
+    display: flex;
+    gap: 1rem;
+}
+
+.notification-item .notification-img {
+    border-radius: 10px;
+}
+
+.notification-with-img {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Media queries */
+@media (max-width: 30rem) {
+    body {
+        padding: 0;
+    }
+}
