@@ -95,7 +95,7 @@ body {
 }
 
 .unread-notification {
-    background-color: var(--light-grayish-blue-1);
+    background-color: var(--very-light-grayish-blue);
     cursor: pointer;
 }
 
